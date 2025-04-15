@@ -1,0 +1,242 @@
+/* Reset Dasar & Pengaturan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Font dasar yang mudah dibaca */
+    background: linear-gradient(135deg, #c4d7e0, #add8e6, #87ceeb); /* Gradasi Biru Soft */
+    color: #333; /* Warna teks dasar */
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Gaya untuk Font Judul/Tema Cinta */
+.title-font {
+    font-family: 'Pacifico', cursive; /* Font tema cinta contoh */
+    font-weight: normal;
+    color: #003366; /* Biru tua untuk kontras */
+    margin-bottom: 1rem;
+}
+
+/* Container & Sections */
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.6); /* Background putih transparan */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em; /* Ukuran judul bagian */
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3; /* Warna tombol biru */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #003366;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative; /* Untuk posisi absolut foto */
+    min-height: 80vh; /* Tinggi minimal section */
+    display: flex;
+    flex-direction: column; /* Default: Teks di atas, foto di bawah di mobile */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white; /* Teks putih di hero */
+    background: rgba(0, 0, 0, 0.2); /* Overlay gelap agar teks terbaca */
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Pastikan warna title di hero jelas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photos {
+    position: relative; /* Agar bisa menampung foto absolut */
+    width: 300px; /* Sesuaikan */
+    height: 250px; /* Sesuaikan */
+    margin-top: 30px;
+}
+
+.tilted-photo {
+    width: 180px; /* Ukuran foto */
+    height: auto;
+    border: 5px solid white;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s 0.3s; /* Transisi untuk hover */
+}
+
+.photo1 {
+    top: 10px;
+    left: 20px;
+    transform: rotate(-12deg);
+    z-index: 1;
+}
+
+.photo2 {
+    top: 50px;
+    left: 100px;
+    transform: rotate(15deg);
+    z-index: 0;
+}
+
+.tilted-photo:hover {
+    transform: rotate(0deg) scale(1.1); /* Lurus & membesar saat hover */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Tampil di paling atas saat hover */
+}
+
+/* --- Countdown Section --- */
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar elemen */
+    margin: 20px 0;
+}
+
+#countdown-timer div {
+    background: rgba(0, 86, 179, 0.1); /* Background biru transparan */
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 80px; /* Lebar minimum */
+}
+
+#countdown-timer span {
+    display: block;
+    font-size: 2.5em; /* Ukuran angka countdown */
+    font-weight: bold;
+    color: #003366; /* Warna angka */
+}
+
+/* --- Reasons Section --- */
+.reasons-list {
+    display: grid; /* Coba gunakan grid untuk layout unik */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kolom responsif */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.reason-card {
+    background-color: #ffffff; /* Kartu putih */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Menandakan bisa diklik */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px); /* Sedikit naik saat hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Gallery Section --- */
+.gallery-container {
+    margin-top: 30px;
+    /* Tambahkan style untuk galeri, misal display flex/grid jika banyak foto */
+}
+
+.gallery-photo {
+    max-width: 80%; /* Batasi lebar foto */
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+/* --- Song Section --- */
+.music-player {
+    margin-top: 20px;
+    /* Style spesifik untuk player jika pakai embed custom */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* --- Particles Placeholder --- */
+/* Style untuk canvas partikel (jika pakai particles.js) */
+#particles-js {
+    position: fixed; /* Atau absolute, tergantung efek */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Agar di belakang konten lain */
+    /* Background bisa diatur di JS atau biarkan transparan */
+}
+
+/* --- Sederhana Ripple Effect (Konsep CSS - Butuh JS untuk Trigger) --- */
+/* Ini BUKAN ripple sebenarnya, hanya visual feedback sederhana */
+.ripple-element { /* Kelas ini ditambahkan oleh JS saat elemen diklik */
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* --- Media Queries untuk Responsif (CONTOH SANGAT DASAR) --- */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row; /* Teks di kiri, foto di kanan di layar lebar */
+        text-align: left;
+        min-height: 60vh;
+    }
+    .hero-content {
+        flex: 1; /* Ambil ruang tersedia */
+        padding-right: 20px;
+    }
+    .hero-photos {
+        flex-basis: 350px; /* Lebar tetap untuk area foto */
+        height: 300px;
+        margin-top: 0;
+    }
+    .tilted-photo {
+        width: 200px;
+    }
+     .photo1 { left: 30px; }
+     .photo2 { left: 130px; }
+}
